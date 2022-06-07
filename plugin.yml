@@ -10,11 +10,14 @@ commands:
   playsound:
     description: Plays a sound
     usage: /playsound <soundName:string> <target:string> [volume:float] [pitch:float]
+    permission: customsound.commands
   stopsound:
     description: Stops a sound
     usage: /stopsound <target:string> <soundName:string>
+    permission: customsound.commands
   reloadsound:
     description: Reload all sounds
+    permission: customsound.commands
 permissions:
   customsound.commands:
     default: op
