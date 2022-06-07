@@ -17,7 +17,7 @@ use pocketmine\math\Vector3;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\network\mcpe\protocol\ProtocolInfo;
 use pocketmine\network\mcpe\protocol\StopSoundPacket;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\resourcepacks\ZippedResourcePack;
 use pocketmine\Server;
@@ -189,7 +189,7 @@ class CustomSound extends PluginBase
 
     // Something
 
-    public function onEnable()
+    public function onEnable() : void
     {
         if (!is_dir($this->getDataFolder() . "sounds")) mkdir($this->getDataFolder() . "sounds");
         $files = glob($this->getDataFolder() . "sounds/*.ogg");
